@@ -1,0 +1,134 @@
+/* CSS HEX */
+
+    --Nickel: #888888;
+
+    --Algae: #51b56d;
+
+    --Orange-Yellow: #ffaf00;
+
+    --Yellow-Orange: #f1a500;
+
+    --Spruce: #006d23;
+
+    --Purple-Brown: #693333;
+
+    --Barney-Purple: #ac00a0;
+
+    --Bright-Cyan: #3de6ed;
+
+    --Black: #040404;
+
+    --Darkish-Red: #a80400;
+
+    --Perrywinkle: #917aeb;
+
+    --Marascino: #ff0000;
+
+
+/* CSS HSL */
+
+    --Nickel: hsla(0, 0%, 53%, 1.00);
+
+    --Algae: hsla(38, 40%, 51%, 1.00);
+
+    --Orange-Yellow: hsla(11, 100%, 50%, 1.00);
+
+    --Yellow-Orange: hsla(11, 100%, 47%, 1.00);
+
+    --Spruce: hsla(39, 100%, 21%, 1.00);
+
+    --Purple-Brown: hsla(100, 35%, 31%, 1.00);
+
+    --Barney-Purple: hsla(84, 100%, 34%, 1.00);
+
+    --Bright-Cyan: hsla(51, 83%, 58%, 1.00);
+
+    --Black: hsla(0, 0%, 2%, 1.00);
+
+    --Darkish-Red: hsla(0, 100%, 33%, 1.00);
+
+    --Perrywinkle: hsla(70, 74%, 70%, 1.00);
+
+    --Marascino: hsla(100, 100%, 50%, 1.00);
+
+
+/* SCSS HEX */
+
+    $Nickel: #888888;
+
+    $Algae: #51b56d;
+
+    $Orange-Yellow: #ffaf00;
+
+    $Yellow-Orange: #f1a500;
+
+    $Spruce: #006d23;
+
+    $Purple-Brown: #693333;
+
+    $Barney-Purple: #ac00a0;
+
+    $Bright-Cyan: #3de6ed;
+
+    $Black: #040404;
+
+    $Darkish-Red: #a80400;
+
+    $Perrywinkle: #917aeb;
+
+    $Marascino: #ff0000;
+
+
+/* SCSS HSL */
+
+    $Nickel: hsla(0, 0%, 53%, 1.00);
+
+    $Algae: hsla(38, 40%, 51%, 1.00);
+
+    $Orange-Yellow: hsla(11, 100%, 50%, 1.00);
+
+    $Yellow-Orange: hsla(11, 100%, 47%, 1.00);
+
+    $Spruce: hsla(39, 100%, 21%, 1.00);
+
+    $Purple-Brown: hsla(100, 35%, 31%, 1.00);
+
+    $Barney-Purple: hsla(84, 100%, 34%, 1.00);
+
+    $Bright-Cyan: hsla(51, 83%, 58%, 1.00);
+
+    $Black: hsla(0, 0%, 2%, 1.00);
+
+    $Darkish-Red: hsla(0, 100%, 33%, 1.00);
+
+    $Perrywinkle: hsla(70, 74%, 70%, 1.00);
+
+    $Marascino: hsla(100, 100%, 50%, 1.00);
+
+
+/* SCSS RGB */
+
+    $Nickel: rgba(0.5333333333, 0.5333333333, 0.5333333333, 1.00);
+
+    $Algae: rgba(0.3176470588, 0.7098039216, 0.4274509804, 1.00);
+
+    $Orange-Yellow: rgba(1.0000000000, 0.6862745098, 0.0000000000, 1.00);
+
+    $Yellow-Orange: rgba(0.9450980392, 0.6470588235, 0.0000000000, 1.00);
+
+    $Spruce: rgba(0.0000000000, 0.4274509804, 0.1372549020, 1.00);
+
+    $Purple-Brown: rgba(0.4117647059, 0.2000000000, 0.2000000000, 1.00);
+
+    $Barney-Purple: rgba(0.6745098039, 0.0000000000, 0.6274509804, 1.00);
+
+    $Bright-Cyan: rgba(0.2392156863, 0.9019607843, 0.9294117647, 1.00);
+
+    $Black: rgba(0.0156862745, 0.0156862745, 0.0156862745, 1.00);
+
+    $Darkish-Red: rgba(0.6588235294, 0.0156862745, 0.0000000000, 1.00);
+
+    $Perrywinkle: rgba(0.5686274510, 0.4784313725, 0.9215686275, 1.00);
+
+    $Marascino: rgba(1.0000000000, 0.0000000000, 0.0000000000, 1.00);
+

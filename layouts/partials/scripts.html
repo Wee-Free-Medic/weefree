@@ -1,0 +1,20 @@
+<!-- # JS Plugins -->
+<script src="/plugins/jquery/jquery.min.js"></script>
+<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="/plugins/slick/slick.min.js"></script>
+<script src="/plugins/scrollmenu/scrollmenu.min.js"></script>
+
+<!-- Main Script -->
+<script src="/js/script.js"></script>
+
+<!-- Font Awesome -->
+{{ if .Params.fonts }}
+<script src="https://kit.fontawesome.com/e5d677d094.js" crossorigin="anonymous"></script>
+{{ end }}
+
+<!-- Conditional Scripts -->
+{{ if .Params.contactForm }}
+<script src='//www.hCaptcha.com/1/api.js' async defer></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js" async></script>
+<script src="/js/contact.validate.js" async></script>
+{{ end }}

@@ -1,0 +1,42 @@
+
+<head>
+
+	<meta charset="utf-8">
+  {{ $title := print .Site.Title " | " .Title }}
+  {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+  <title>{{ $title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	<meta name="description"
+	content="Wee Free Medic provides CPR, First Aid, and Wilderness Medical Training as well as Stree Medical and Volunteer EMT services.">
+	<meta name="author" content="Michael Dacre">
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+	<!-- # Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+	<!-- # CSS Plugins -->
+	<link rel="stylesheet" href="/plugins/slick/slick.css">
+	<!--<link rel="stylesheet" href="/plugins/font-awesome/fontawesome.min.css">
+	<link rel="stylesheet" href="/plugins/font-awesome/brands.css">
+	<link rel="stylesheet" href="/plugins/font-awesome/solid.css">-->
+
+	<!-- # Main Style Sheet -->
+	<link rel="stylesheet" href="/css/style.css">
+
+  <!-- # Favicon -->
+	<link rel="shortcut icon" href="/images/icon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/icon/favicon-16x16.png">
+	<link rel="manifest" href="/images/icon/site.webmanifest">
+	<link rel="mask-icon" href="/images/icon/safari-pinned-tab.svg" color="#00f2ff">
+	<meta name="apple-mobile-web-app-title" content="WeeFree">
+	<meta name="application-name" content="WeeFree">
+	<meta name="msapplication-TileColor" content="#00f2ff">
+	<meta name="msapplication-config" content="/images/icon/browserconfig.xml">
+	<meta name="theme-color" content="#00f2ff">
+
+</head>
