@@ -12,9 +12,12 @@
 <script src="https://kit.fontawesome.com/e5d677d094.js" crossorigin="anonymous"></script>
 {{ end }}
 
-<!-- Conditional Scripts -->
+<!-- Contact Form Scripts -->
 {{ if .Params.contactForm }}
-<script src='//www.hCaptcha.com/1/api.js' async defer></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js" async></script>
-<script src="/js/contact.validate.js" async></script>
+<script src="/plugins/angular/angular.min.js"></script>
+
+<!-- include hCaptcha -->
+<script src="https://www.hCaptcha.com/1/api.js" async defer></script>
+
+<script src="/js/contact.validate.js"></script>
 {{ end }}
