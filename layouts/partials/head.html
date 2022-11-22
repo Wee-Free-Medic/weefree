@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
   {{ $title := print .Site.Title " | " .Title }}
   {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+
   <title>{{ $title }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-	<meta name="description"
-	content="Wee Free Medic provides CPR, First Aid, and Wilderness Medical Training as well as Stree Medical and Volunteer EMT services.">
+	<meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{ .Description}}{{end}}">
 	<meta name="author" content="Michael Dacre">
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
 	<link rel="icon" href="/images/favicon.png" type="image/x-icon">
@@ -19,9 +19,6 @@
 
 	<!-- # CSS Plugins -->
 	<link rel="stylesheet" href="/plugins/slick/slick.css">
-	<!--<link rel="stylesheet" href="/plugins/font-awesome/fontawesome.min.css">
-	<link rel="stylesheet" href="/plugins/font-awesome/brands.css">
-	<link rel="stylesheet" href="/plugins/font-awesome/solid.css">-->
 
 	<!-- # Main Style Sheet -->
 	<link rel="stylesheet" href="/css/style.css">
@@ -38,5 +35,11 @@
 	<meta name="msapplication-TileColor" content="#00f2ff">
 	<meta name="msapplication-config" content="/images/icon/browserconfig.xml">
 	<meta name="theme-color" content="#00f2ff">
+
+	<!-- # Open Graph -->
+	<meta property="og:title" content="{{ $title }}">
+	<meta property="og:description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{ .Description}}{{end}}">
+	<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+	<meta property="og:url" content="{{ .Permalink }}">
 
 </head>

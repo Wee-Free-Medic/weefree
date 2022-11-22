@@ -24,8 +24,6 @@
     {{- partial "head.html" . -}}
     {{- partial "phpMailer.php" . -}}
     <body>
-        {{ if .Params.contactForm }}
-        {{ end }}
         {{- partial "header.html" . -}}
         <div id="content">
           {{- block "main" . }}{{- end }}
