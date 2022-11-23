@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ partial "pageHeader.html" }}
+{{- partial "pageHeader.html" . -}}
 
 <section id="page-section" class="section">
   <div class="container">
