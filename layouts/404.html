@@ -1,17 +1,23 @@
 {{ define "main" }}
 <section class="banner bg-tertiary position-relative overflow-hidden">
-  <div id="banner" class="row align-items-center">
-    <img alt="Doctor with a patient in the clinic and on the street" src="/images/headers/double-banner-clinic.png" />
-  </div>
   <div class="row align-items-center">
     <p class="text-title fw-bold">The Wee Free Medic</p>
-    <p class="text-subtitle mb-3">Providing free street medical services and the best CPR and wilderness medicine training.</p>
+    <p class="text-subtitle mb-3">Page Not Found!</p>
   </div>
 </section>
 <section class="content">
-  <div class="content">
-    404. Page not found.
-    <a href="/">Go Home.</a>
+  <div class="container">
+    <div class="row center text-center">
+      <div class="col-lg-12">
+        <p>Oops. That page wasn't found. Sorry!</p>
+        <p>
+          If this is from a broken link please <a href="/contact">contact me</a>
+          and let me know, otherwise you can just go <a href="/">Home</a> or
+          <a href="#" onclick="window.history.back()">back to where you came from</a>.
+        </p>
+        <p><img width="500" src="/images/tbstand1-error.png" alt="Error Monster"></p>
+      </div>
+    </div>
   </div>
 </section>
 {{ end }}
