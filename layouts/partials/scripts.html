@@ -5,19 +5,24 @@
 <script src="/plugins/scrollmenu/scrollmenu.min.js"></script>
 
 <!-- Main Script -->
-<script src="/js/script.js"></script>
+<script src="/js/script.min.js"></script>
 
 <!-- Font Awesome -->
 {{ if .Params.fonts }}
 <script src="https://kit.fontawesome.com/e5d677d094.js" crossorigin="anonymous"></script>
 {{ end }}
 
-<!-- Contact Form Scripts -->
 {{ if .Params.contactForm }}
+<!-- Contact Form Scripts -->
 <script src="/plugins/angular/angular.min.js"></script>
 
 <!-- include hCaptcha -->
 <script src="https://www.hCaptcha.com/1/api.js" async defer></script>
 
 <script src="/js/contact.validate.js"></script>
+{{ end }}
+
+{{ if .Params.contactInfo }}
+<!-- Contact Obfustication Script -->
+<script src="/js/contactInfo.min.js" async></script>
 {{ end }}
