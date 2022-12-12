@@ -1,0 +1,66 @@
+{{ define "main" }}
+{{ partial "pageHeader.html" . }}
+
+<br>
+<section id="page-section" class="section">
+  <div class="container">
+    {{ .Content }}
+  </div>
+</section>
+
+{{ if .Pages }}
+<section id="page-section" class="section">
+  <div class="container">
+    <div class="row">
+      <h2>{{ .Title }}</h2>
+      <div class="col-lg-3">
+        {{ $start := true }}
+        {{ $newSecAfter := div (len .Pages) 4 }}
+        {{ if eq $newSecAfter 1 }}{{ $newSecAfter = 2 }}{{ end }}
+        {{ range $i, $v := .Pages }}
+          {{ $i = add $i 1 }}{{ $newSec := not (modBool $i $newSecAfter) }}
+          {{ if and ($newSec) (not $start) }}
+      </div>
+      <div class="col-lg-3">
+          {{ end }}
+          {{ if $start }}{{ $start = false }}{{ end }}
+          <h3><a class="title" href="{{ $v.RelPermalink }}">{{ $v.Title }}</a></h3>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section id="page-section" class="section">
+  <div class="container">
+    <h2>All Taxonomies</h2>
+    <div class="row">
+      {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
+        {{ if gt (len $taxonomy) 0 }}
+        {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
+          <div class="col-lg-3">
+            <h3><a href="{{ .Permalink }}">{{ $taxonomy_term }}</a></h3>
+            <ul>
+              {{ range $key, $value := $taxonomy }}
+                {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy_term $key) }}
+                  <h4><a href="{{ .Permalink }}">{{ $key }}</a></h4>
+                {{ end }}
+                <ul>
+                  {{ range $value.Pages }}
+                  <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
+                  {{ end }}
+                </ul>
+                <br>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+
+{{ end }}

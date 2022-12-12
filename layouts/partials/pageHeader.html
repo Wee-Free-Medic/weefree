@@ -1,18 +1,14 @@
-<section class="page-header bg-cover"
-          {{ with .Params.headerImage }}
-            style="background-image: url(/images/headers/{{.}})"
-          {{ else }}
-            style="background-image: url(/images/headers/redwood-forest.jpg)"
-          {{ end }}>
+{{ $img := "redwood-forest.jpg" }}
+{{ with .Params.headerImage }}
+  {{ $img =  . }}
+{{ end }}
+{{ $img = (path.Join "/images/headers/" $img) }}
+<section class="page-header bg-cover" style="background-image: url({{ safeURL $img }})">
 	<div class="container">
 		<div class="row" style="background: RGBA(250, 250, 250, 0.50) !important;">
 			<div class="col-8 mx-auto text-center">
-				<h1 class="mb-3 text-capitalize">{{ .Title }}</h1>
-        <ul class="list-inline breadcrumbs text-capitalize text-black" style="font-weight:500">
-          {{ partial "breadcrumbs.html" . }}
-          <li class="list-inline-item">/ </li>
-          <li class="list-inline-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        </ul>
+                <h1 class="mb-3 text-capitalize">{{ .Title }}</h1>
+                {{ partial "bread.html" . }}
 			</div>
 		</div>
 	</div>

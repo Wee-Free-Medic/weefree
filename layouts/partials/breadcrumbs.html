@@ -1,8 +1,7 @@
-
 {{ with .Parent }}
     {{ partial "breadcrumbs.html" . }}
     {{ if .Parent }}
-      <li class="list-inline-item">/ </li>
+      <li class="list-inline-item">/</li>
     {{ end }}
       <li class="list-inline-item"><a href="{{ .Permalink }}">{{ if .IsHome }}Home{{ else }}{{.Title}}{{ end }}</a></li>
 {{ end }}

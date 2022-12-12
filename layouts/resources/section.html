@@ -25,4 +25,24 @@
 </section>
 {{ end }}
 
+{{ $us := relref . "." }}
+{{ $files := slice }}
+{{ range os.ReadDir ( path.Join "content" $us ) }}
+    {{ if in ".pdf .jpg .png .txt .doc .docx .ppt .pptx" (path.Ext .Name) }}
+        {{ if not .IsDir }}{{ $files = $files | append .Name }}{{ end }}
+    {{ end }}
+{{ end }}
+{{ if not (eq (len $files) 0) }}
+<section id="page-section" class="section">
+  <div class="container">
+    <h2>All Available Files</h2>
+    {{ range $files }}
+      <p>
+        <h3><a class="title" href="{{ path.Join $us . }}">{{ . }}</a></h3>
+      </p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
 {{ end }}
