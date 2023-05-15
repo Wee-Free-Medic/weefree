@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {{ "<!--" | safeHTML }}
-{{ "  Wee Free Medic" | safeHTML }}
+{{ "  Wee Free Medicine" | safeHTML }}
 {{ "" | safeHTML }}
 {{ "       __..." | safeHTML }}
 {{ "   ___/. :::\\" | safeHTML }}
